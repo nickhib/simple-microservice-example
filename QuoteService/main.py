@@ -4,16 +4,12 @@ from pymongo import MongoClient
 import redis
 
 def get_db():
-    client = MongoClient(host='db',
-                         port=27017,
-                         username='root',
-                         password='pass',
-                         authSource="admin")
+    client = MongoClient("mongodb://localhost:27017/")
     db = client["quote_db"]
     return db
 
 def get_redis():
-    r = redis.Redis(host='redis',
+    r = redis.Redis(host='localhost',
                     port=6379)
     return r
 
