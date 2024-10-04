@@ -3,7 +3,7 @@ Description=API Gateway Service Application
 After=network.target
 
 [Service]
-Environment="QUOTES_API=http://35.209.150.251"
+Environment="QUOTES_API=http://127.0.0.1:5000"
 User=nickthegamer9
 WorkingDirectory=/home/nickthegamer9/simple-microservice-example/ApiGateway/
 ExecStart=npm run start
